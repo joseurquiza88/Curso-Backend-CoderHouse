@@ -1,0 +1,23 @@
+<h2>{{profile.email}}</h2>
+  
+  <img src="{{avatar}}" alt="Avatar" width="150" height="150">
+  
+  <h3>Cargar Avatar</h3>
+  <form action="/users/{{userId}}/upload-avatar" method="POST" enctype="multipart/form-data">
+    <input type="file" name="avatar">
+    <button type="submit">Subir</button>
+  </form>
+  
+  <h3>Cargar Documentos</h3>
+  <form action="/users/{{userId}}/upload-documents" method="POST" enctype="multipart/form-data">
+    <label for="idDocument">Identification:</label>
+    <input type="file" name="idDocument" id="idDocument"><br>
+    
+    <label for="addressProof">Address Proof:</label>
+    <input type="file" name="addressProof" id="addressProof"><br>
+    
+    <label for="bankStatement">Bank Statement:</label>
+    <input type="file" name="bankStatement" id="bankStatement"><br>
+    
+    <button type="submit">Subir Documentos</button>
+  </form>

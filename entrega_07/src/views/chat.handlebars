@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <h1>Chat</h1>
+  <form id="chat-form" action="/api/messages" method="POST">
+    <input type="text" id="user-input" name="user" placeholder="Correo del usuario">
+    <input type="text" id="message-input" name="message" placeholder="Mensaje">
+    <button type="submit">Enviar</button>
+  </form>
+  <ul>
+    {{#each messages}}
+      <li><strong>{{this.user}}:</strong> {{this.message}}</li>
+    {{/each}}
+  </ul>
+  </html>

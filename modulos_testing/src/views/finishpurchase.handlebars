@@ -1,0 +1,15 @@
+
+    <h1>Compra exitosa!</h1>
+    <ul>
+        {{#each purchase}}
+            <li>
+                <strong>Id:</strong> {{_id}} <br>
+                <strong>Código del carrito:</strong> {{code}} <br>
+                <strong>Fecha de Compra:</strong> {{purchase_datetime}} <br>
+                <strong>Total:</strong> {{amount}} <br>
+                <strong>Cliente:</strong> {{purchaser}} <br>
+                <a  class="btn btn-secondary m-2 ml-10 "  href="/api/products">Lista de productos</a>
+            </li>
+
+        {{/each}}
+    </ul>

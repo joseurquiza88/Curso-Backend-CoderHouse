@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de productos</title>
+</head>
+<body>
+  <div class="welcome-message d-flex align-items-center">
+    <div>
+      <p>Bienvenido a su carrito {{username}} </p>
+    </div>
+        
+        <div>
+         {{#if user.admin}}
+            <p>Rol:&nbsp;Administrador</p>
+          {{else}}
+              <p>Rol:&nbsp;Usuario</p>
+        {{/if}}
+        <a  id="logout-button" class="btn btn-secondary m-2 ml-10 ">Cerrar Sesión</a>
+        </div>
+
+
+    </div>
+  <div id="product-list" class="d-flex flex-row flex-wrap">
+        {{#each products}}
+          <div class="card bg-light m-2 mb-10 p-5">
+            <div class="card-body">
+              <h2 class="card-title">{{name}}</h2>
+              <p class="card-text">Categoría: {{category}}</p>
+              <p class="card-text">Disponibilidad: {{availability}}</p>
+              <p class="card-text">Precio: {{price}}</p>
+              <button type="button" class="btn btn-info add-to-cart-button" id="{{_id}}">Agregar al Carrito</button>
+              <button type="button" class="btn btn-info view-details-button" id="{{_id}}">Mas info</button>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+      <div id="paginated">
+        <p>Page {{ pagination.currentPage }} of {{ pagination.totalPages }}</p>
+        
+        {{#if pagination.hasPrevPage}}
+          <a href="{{ pagination.prevLink }}">Anterior</a>
+        {{/if}}
+        
+        {{#if pagination.hasNextPage}}
+          <a href="{{ pagination.nextLink }}">Siguiente</a>
+        {{/if}}
+      </div>
+      
+      
+    </body>
+    
+    <script src="/js/script.js"></script>
+  <script src="/js/logout.js"></script>
+ </html>

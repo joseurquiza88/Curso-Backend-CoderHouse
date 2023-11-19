@@ -1,0 +1,15 @@
+
+<h2>Actualizacion de Roles de usuarios</h2>
+<form id="update-role-user-form" method="POST" >
+  <label for="userEmail">Correo Electrónico del Usuario:</label>
+  <input type="email" name="userEmail" id="userEmail" required>
+  <label for="newRole">Nuevo Rol:</label>
+  <select name="newRole" id="newRole">
+    <option value="user">Usuario</option>
+    <option value="premium">Premium</option>
+  </select>
+  <button type="submit">Actualizacion de Roles</button>
+  <a  class="btn btn-secondary m-2 ml-10 "  href="/api/products">Ir a productos</a>
+</form>
+
+<script src="/js/changerole.js"></script>

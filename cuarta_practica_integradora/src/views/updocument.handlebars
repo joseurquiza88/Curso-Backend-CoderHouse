@@ -1,0 +1,15 @@
+<h1>Subir documentos</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+   
+    <label for="documentType">Seleccione el tipo de documento:</label>
+    <select id="documentType" name="documentType">
+      <option value="identification">Identificación</option>
+      <option value="addressProof">Comprobante de domicilio</option>
+      <option value="bankStatement">Comprobante de estado de cuenta</option>
+      <option value="avatar">Perfil</option>
+    </select>
+    <label for="file">Seleccione documento:</label>
+    <input type="file" name="file" accept=".pdf, .doc, .docx, .jpg, .png">
+
+    <button type="submit">Subir Documento</button>
+  </form>

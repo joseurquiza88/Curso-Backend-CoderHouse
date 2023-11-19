@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle producto</title>
+</head>
+<body>
+  <div>
+
+  </div>
+  
+      <div id="product-details" class="container mt-5">
+        <div class="card bg-warning mb-3">
+          <div class="card-body">
+            <h1 class="card-title">{{product.name}}</h1>
+            <p class="card-text">{{product.description}}</p>
+            <p class="card-text">Categoría: {{product.category}}</p>
+            <p class="card-text">Disponibilidad: {{product.availability}}</p>
+            <p class="card-text">Precio: {{product.price}}</p>
+            <button type="button" class="btn btn-secondary add-to-cart-button" id="{{product._id}}" >Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+
+</body>
+{{!-- //<script src="/js/signup.js"></script> --}}
+ {{!-- <script src="/js/script.js"></script> --}}
+ {{!-- <script src="/js/product.js"></script> --}}
+  <script src="/src/public/js/product.js"></script>
+ </html>
+
